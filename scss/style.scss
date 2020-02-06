@@ -1,0 +1,49 @@
+/* Template Name: Cristino - Responsive Personal Template
+   Author: Shreethemes
+   Email: shreethemes@gmail.com
+   Website: http://www.shreethemes.in/
+   Version: v1.3
+   Updated: 15th January, 2020
+   Created: August, 2019
+   File Description: Main Css file of the template
+*/
+
+/**********************************/
+/*       INDEX                    */
+/*=================================
+ *    01.  Variables              *
+ *    02.  Bootstrap Custom       *
+ *    03.  Components             *
+ *    04.  General                *
+ *    05.  Helper                 *
+ *    06.  Menu                   *
+ *    07.  Home                   *
+ *    08.  About                  *
+ *    09.  Service                *
+ *    10.  Counter                *
+ *    11.  Resume                 *
+ *    12.  C.T.A                  *
+ *    13.  Portfolio              *
+ *    14.  Testi                  *
+ *    15.  Blog                   *
+ *    16.  Contact                *
+ *    17.  Footer                 *
+ =================================*/
+
+@import "variables";
+@import "bootstrap-custom";
+@import "components";
+@import "general";
+@import "helper";
+@import "menu";
+@import "home";
+@import "about";
+@import "service";
+@import "counter";
+@import "resume";
+@import "cta";
+@import "portfolio";
+@import "testi";
+@import "blog";
+@import "contact";
+@import "footer";

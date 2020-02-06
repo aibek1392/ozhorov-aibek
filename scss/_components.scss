@@ -1,0 +1,217 @@
+//
+// components.scss
+//
+//Buttons
+@each $name,
+$value in $colors {
+    .btn-#{$name} {
+        background-color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+        color: $white !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($value, 10%) !important;
+            border-color: darken($value, 10%) !important;
+            color: $white !important;
+        }
+    }
+
+    .btn-outline-#{$name} {
+        border: 1px solid #{$value};
+        color: #{$value};
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus, &:not(:disabled):not(.disabled):active{
+            background-color: #{$value};
+            border-color: #{$value};
+            color: $white !important;
+        }
+    }
+}
+.btn {
+    padding: 12px 24px;
+    outline: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+    &:focus {
+        box-shadow: none !important;
+    }
+    &.btn-sm {
+        padding: 7px 16px;
+        font-size: 10px;
+    }
+    &.btn-lg {
+        padding: 14px 30px;
+        font-size: 16px;
+    } 
+    &.searchbtn {
+        padding: 6px 20px;
+    }
+    &.btn-pill {
+        border-radius: 30px !important;
+    }
+    &.btn-light {
+        color: $dark !important;
+        background: $light;
+        border: 1px solid $gray-300;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($light, 10%) !important;
+            color: $dark; 
+        }
+    }    
+    &.btn-outline-light {
+        border: 1px solid $gray-300;
+        color: $white;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $light;
+            color: $dark !important;
+        }
+    }
+}
+
+button:not(:disabled) {
+    outline: none;
+}
+
+//Processbar
+.progress-box {
+    .title {
+        font-size: 14px;
+    }
+    .progress {
+        height: 8px;
+        overflow: visible;
+        border: 1px solid $gray-400;
+        .progress-bar {
+            height: 2px;
+            border-radius: 5px;
+            margin: auto 2px;
+            animation: animate-positive 3s;
+            overflow: visible !important;
+        }
+        .progress-value {
+            position: absolute;
+            top: -38px;
+            right: -20px;
+            padding: 5px;
+            font-size: 13px;
+        }
+    }
+    @keyframes animate-positive {
+        0% {
+            width: 0;
+        }
+    }
+}
+
+//Nav
+.nav-pills {
+    .nav-link{
+        color: $body-color !important;
+        margin: auto 15px;
+        border: 1px solid $gray-200;
+        &.active {
+            background-color: $custom;
+            color: $white !important;
+            border-color: $custom !important;
+            box-shadow: $shadow;
+        }
+    }
+    a {
+        .skill-container {
+            .title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+//Breadcrumb
+.page-next-level{
+    .title {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .page-next {
+        letter-spacing: 0.5px;
+        li {
+            display: inline-block;
+            margin-right: 5px;
+            &:after {
+                content: "\f142";
+                font-size: 16px;
+                color: $dark; 
+                font-family: 'Material Design Icons';
+            }     
+            &:last-child {
+                margin-right: 0;
+                &:after {
+                    display: none;
+                }
+            }       
+            a, span {        
+                font-size: 14px;
+                padding-right: 8px;           
+                transition: all 0.5s ease;
+                font-weight: 600;
+            }
+            a {
+                &:hover {
+                    color: $custom !important;
+                } 
+            }
+            span {
+                &:last-child {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+//Pagination
+.pagination {    
+    line-height: 20px;
+    font-size: 13px;
+    li {
+        display: inline;
+        &:first-child a {
+            border-left-width: 1px;
+            border-radius: 5px 0 0 5px;
+        } 
+        &:last-child a{
+            border-radius: 0 5px 5px 0;
+        }
+        a {
+            float: left;
+            text-decoration: none;
+            color: $dark;
+            border: 1px solid $gray-300;
+            border-left-width: 0;
+            background: $white; 
+            &:hover {
+                color: $white;
+                background: $custom;
+                border-color: $custom;
+            }
+        }
+    }              
+    .active a {
+        color: $white;
+        background: $custom !important;
+        border-color: $custom;
+        cursor: not-allowed;
+    }
+}
+
+//blockquote
+.blockquote {
+    border-left: 3px solid $gray-300;
+    font-size: 16px;
+}
